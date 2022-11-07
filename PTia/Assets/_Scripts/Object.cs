@@ -19,6 +19,7 @@ public class Object : MonoBehaviour
 
     public virtual void TakeDamage()
     {
+        health -= 1;
         if(health <= 0)
         {
             Destruction();
