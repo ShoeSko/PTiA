@@ -9,8 +9,16 @@ public class Shapes : MonoBehaviour
     public Color colour { get; private set; }
 
     public Text textDisplay;
+
+    private void Start()
+    {
+        name = gameObject.name;
+        colour = gameObject.GetComponent<Image>().color;
+    }
+
     public virtual void DisplayText()
     {
-
+        textDisplay.text = "You Pressed " + colour.ToString() + name;
+        textDisplay.color = colour;
     }
 }

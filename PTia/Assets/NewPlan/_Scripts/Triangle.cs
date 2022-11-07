@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Triangle : Shapes
 {
-
+    public override void DisplayText()
+    {
+        base.DisplayText();
+    }
 }
